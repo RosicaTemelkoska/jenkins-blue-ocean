@@ -17,7 +17,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image from the Dockerfile
-                    sh 'docker build -t yourusername/jenkins-pipeline-demo .'
+                    sh 'docker build -t rosica/jenkins .'
                 }
             }
         }
@@ -29,7 +29,7 @@ pipeline {
                         sh 'echo $DOCKER_PASSWORD | docker login --username $DOCKER_USERNAME --password-stdin'
                     }
                     // Push the Docker image to Docker Hub
-                    sh 'docker push yourusername/jenkins-pipeline-demo'
+                    sh 'docker push rosica/jenkins'
                 }
             }
         }
