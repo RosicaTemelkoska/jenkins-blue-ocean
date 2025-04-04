@@ -34,4 +34,6 @@ pipeline {
             }
         }
     }
+
+    echo "Hello from Jenkins!"
 }
